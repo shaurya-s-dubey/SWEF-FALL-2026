@@ -49,14 +49,14 @@ Our commitment is not just about teaching the subject matter but also ensuring y
 <hr>
 📢 **If you have to miss a session:**
 
-1. In a timely manner, create a group chat with the Tech Consulting Foundations Committee Members on Slack informing them you will not be able to make it.
+1. In a timely manner, create a group chat with the Software Engineering Foundations Committee Members on Slack informing them you will not be able to make it.
 2. Catch-up on what you missed by reviewing slides (that will be posted in this syllabus at Schedule & Curriculum) and homework. Ask classmates and instructors for questions, attending office hours to learn new concepts.
-3. Do the homework and submit it by the following session, just like everyone else, unless you’ve spoken to the Tech Consulting Foundations Committee Members about an alternate plan to accommodate your situation.
+3. Do the homework and submit it by the following session, just like everyone else, unless you’ve spoken to the Software Engineering Foundations Committee Members about an alternate plan to accommodate your situation.
 <hr>
 
-**In-Class Participation**. Interact with your fellow classmates. Ask questions. Have fun with the material presented in class. We would love to hear your voice! Tech Consulting Foundations is an experience for you and we’ll need your help making it amazing.
+**In-Class Participation**. Interact with your fellow classmates. Ask questions. Have fun with the material presented in class. We would love to hear your voice!  Consulting Foundations is an experience for you and we’ll need your help making it amazing.
 
-> Please notify the Tech Consulting Foundation Committee Members in advance if you predict that you will not be able to finish a session’s homework. If you do not notify us that you will not be able to finish a session’s homework or if you develop a pattern of missing out from homework, we will set up a 1:1 to make sure you are getting all the help you need to have a successful time at Tech Consulting Foundations!
+> Please notify the Software Engineering Foundation Committee Members in advance if you predict that you will not be able to finish a session’s homework. If you do not notify us that you will not be able to finish a session’s homework or if you develop a pattern of missing out from homework, we will set up a 1:1 to make sure you are getting all the help you need to have a successful time at Software Engineering Foundations!
 
 > **Asking for Help**: Asking for help is immensely encouraged! Please do not struggle alone on a topic or homework—reach out to students, instructors and go to office hours. Not only will this increase class cohesion, but it will lessen the load on you and help you learn better. A win-win!
 
