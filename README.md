@@ -23,7 +23,7 @@ TODO: Add more detail and a guide about using this.
 ## Sessions:
 
 1. [Gitting into it!](01-git/)
-2. [Frontend Crash Course](02-frontend/) (Static HTML/CSS, JS, Intro to React)
+2. [Frontend Crash Course](02-frontend/) (HTML/CSS/JS foundations → Next.js, React, Tailwind)
 3. [Programming Languages](03-programming-languages/)
 4. [Database Design](04-database-design/)
 5. [Backend I: APIs & REST](05-backend-api/)

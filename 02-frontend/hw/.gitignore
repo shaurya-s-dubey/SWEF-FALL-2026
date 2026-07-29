@@ -1,0 +1,4 @@
+# Keep student sites out of accidental commits of dependencies
+# (create-next-app already gitignores node_modules inside mywebsite/)
+mywebsite/node_modules/
+mywebsite/.next/
