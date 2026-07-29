@@ -2,7 +2,7 @@
 
 **Date:** Feb 16th, 2026
 
-> ⚠️ **Preparation is critical this week.** There will be **no lecture** — session time is almost entirely a hands-on activity. Complete [pre/README.md](pre/README.md) beforehand (that *is* the lecture). If you skip it, you will be lost.
+>  **Preparation is critical this week.** There will be **no lecture** — session time is almost entirely a hands-on activity. Complete [pre/README.md](pre/README.md) beforehand (that *is* the lecture). If you skip it, you will be lost.
 
 ## Overview
 
