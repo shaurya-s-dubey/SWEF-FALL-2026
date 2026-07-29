@@ -2,7 +2,7 @@
 
 There is **no lecture in class** this week — only a hands-on activity. Everything you need to learn beforehand lives **here**. Class time assumes you already did this.
 
-> 🚨 If you skip this, you will be lost. Budget ~**1 hour 15 minutes** for the required parts. Optional extras are for when you’re stuck or want to go deeper — on your own time.
+ If you skip this, you will be lost. Budget ~**1 hour 15 minutes** for the required parts. Optional extras are for when you’re stuck or want to go deeper — on your own time.
 
 ---
 
