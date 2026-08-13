@@ -59,16 +59,6 @@ Optional: also try it on [LeetCode #3](https://leetcode.com/problems/longest-sub
 
 ---
 
-## Part 4: Submission
-
-Fill [`submission.md`](submission.md) briefly (~150 words total): co-op path, one resume change, what was hard about the LeetCode, pitch timing.
-
----
-
-## AI note
-
-AI is fine. You still need to explain your pitch, STAR story, and solution if asked.
-
 ## Self-check
 
 - [ ] Pitch timed 60–90s
