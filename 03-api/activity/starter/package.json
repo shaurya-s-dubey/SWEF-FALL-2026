@@ -1,0 +1,14 @@
+{
+  "name": "books-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SWEF activity: a tiny REST API you finish and test with Insomnia",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
