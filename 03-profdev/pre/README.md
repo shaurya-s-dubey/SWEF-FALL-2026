@@ -63,4 +63,4 @@ Use your school / co-op resume guide if you have one.
 - [ ] Provisional co-op path picked
 - [ ] Know STAR; read the Muse article
 - [ ] Resume updated
-- [ ] **3 printed copies** with you
+- [ ] **3 printed copies** with you for resume review
