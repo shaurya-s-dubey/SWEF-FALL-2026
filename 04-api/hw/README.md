@@ -50,7 +50,6 @@ Insomnia: **DELETE** `http://localhost:3001/books/1` (no body) → `200`. `GET /
 ## Part 3: Submission
 
 1. Push updated `server.js` (not `node_modules/`)
-2. Fill [`submission.md`](submission.md)
 
 Restart once and notice the two seed books come back — that’s “in memory.” Databases are how you keep data after a restart.
 
