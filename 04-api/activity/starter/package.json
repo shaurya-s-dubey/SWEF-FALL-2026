@@ -2,7 +2,7 @@
   "name": "books-api",
   "version": "1.0.0",
   "private": true,
-  "description": "SWEF activity: a tiny REST API you finish and test with Insomnia",
+  "description": "SWEF: tiny Books REST API — POST in class, PUT/DELETE for homework (test with Insomnia)",
   "main": "server.js",
   "scripts": {
     "dev": "node --watch server.js",
