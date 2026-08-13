@@ -24,7 +24,7 @@ TODO: Add more detail and a guide about using this.
 
 1. [Gitting into it!](01-git/)
 2. [Frontend Crash Course](02-frontend/) (HTML/CSS/JS foundations → Next.js, React, Tailwind)
-3. [Programming Languages](03-programming-languages/)
+3. [Professional Development](03-profdev/) (resume, career paths, STAR, interview coding)
 4. [Database Design](04-database-design/)
 5. [Backend I: APIs & REST](05-backend-api/)
 6. [Backend II: Architecture & Scalability](06-backend-architecture/)
