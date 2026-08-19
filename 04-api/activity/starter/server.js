@@ -1,7 +1,7 @@
 // A tiny REST API for a bookshelf.
 //
-// Class:    implement POST /books
-// Homework: implement PUT /books/:id and DELETE /books/:id
+// Class: implement POST /books, PUT /books/:id, DELETE /books/:id
+// Homework is a separate OpenAI wrapper in 04-api/hw/
 //
 // Run:  npm run dev  ->  http://localhost:3001
 
@@ -40,32 +40,22 @@ app.get("/books/:id", (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// CLASS — POST /books (create)
-//   See activity/BOOKS_API.md for the reference shape + Insomnia steps.
+// CLASS — POST, PUT, DELETE (see activity/BOOKS_API.md)
 // ---------------------------------------------------------------------------
 
 app.post("/books", (req, res) => {
-  // TODO (class): read title/author from req.body
-  // TODO (class): 400 if either is missing
-  // TODO (class): create book with nextId++, push, respond 201
+  // TODO: title/author from req.body; 400 if missing; push; 201
   res.status(501).json({ error: "POST /books not implemented yet" });
 });
 
-// ---------------------------------------------------------------------------
-// HOMEWORK — PUT + DELETE
-//   See hw/README.md
-// ---------------------------------------------------------------------------
-
 app.put("/books/:id", (req, res) => {
-  // TODO (homework): find book by id; 404 if missing
-  // TODO (homework): update fields from req.body; respond 200 with the book
-  res.status(501).json({ error: "PUT /books/:id not implemented yet (homework)" });
+  // TODO: find by id; 404 if missing; update from req.body; 200
+  res.status(501).json({ error: "PUT /books/:id not implemented yet" });
 });
 
 app.delete("/books/:id", (req, res) => {
-  // TODO (homework): find index by id; 404 if missing
-  // TODO (homework): splice it out; respond 200 with { deleted: book }
-  res.status(501).json({ error: "DELETE /books/:id not implemented yet (homework)" });
+  // TODO: findIndex by id; 404 if missing; splice; 200 { deleted }
+  res.status(501).json({ error: "DELETE /books/:id not implemented yet" });
 });
 
 app.listen(PORT, () => {

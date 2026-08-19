@@ -1,93 +1,130 @@
-# Pre-work: APIs & REST
+# Pre-work: APIs (this is the lecture)
 
-Budget ~**25 minutes**. Class is short and hands-on — setup belongs **here**.
+Class is a **review** plus a build. Learn from the resources below; the notes here are only so you know *why* you’re watching/reading. Budget ~**50–60 minutes** for the required parts.
 
----
-
-## What you should have ready
-
-- Know what an **API** is (and what it’s for)
-- **Insomnia** installed and opened once
-- Starter dependencies installed (`npm install` in the activity folder)
+If you skip this, the activity will feel like typing into a void.
 
 ---
 
-## 1. What is an API? (~15 min)
+## What you’ll be able to do after this
 
-**API** = Application Programming Interface. For web backends: a set of URLs a server exposes so other programs (a website, a phone app, another service) can read or change data.
+- Explain REST well enough to build: resources, methods, JSON, status codes
+- Know Express (class) vs FastAPI (Python — same idea)
+- Use **Insomnia** to send GET/POST
+- Know that calling someone else’s API is still HTTP (homework uses **OpenAI** — research that when you get there)
+- Show up ready to finish the Books API in class
 
-Restaurant metaphor:
+---
 
-| Metaphor | In software |
-| --- | --- |
-| Menu | Endpoints (`/books`, `/books/1`, …) |
-| Your order | The **request** (method + URL + optional JSON body) |
-| Kitchen | Server logic |
-| Food coming back | The **response** (status code + JSON) |
-
-You talk to the waiter (the API). You don’t go into the kitchen.
-
-**Why this exists:** frontend and backend can be separate; many clients can share one backend; you can test the backend **before** any UI exists (that’s what Insomnia is for).
+## 1. What is an API? (Required, ~8 min)
 
 Watch **one**:
 
 - [What is an API? (~3 min)](https://www.youtube.com/watch?v=-0MmWEYR2a8)
-- Optional: [RESTful APIs in 100 Seconds](https://www.youtube.com/watch?v=-MTSQjw5DrM) — the 100-seconds part is enough
+- Then: [RESTful APIs in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=-MTSQjw5DrM) — the opening ~2 minutes is enough; the Express build-along is optional
 
-### REST in one table
+**Takeaway:** an API is how programs talk over HTTP. Class = you **build** one. Homework = you **call** someone else’s (OpenAI).
 
-URLs are **nouns**. HTTP methods are **verbs**.
+---
 
-| Method | Meaning | Example |
+## 2. REST, HTTP, JSON (Required, ~15 min)
+
+Read these (skim, don’t memorize every page):
+
+| Resource | What to get from it |
+| --- | --- |
+| [MDN — HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) | Request / response, URLs, headers |
+| [MDN — HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods) | `GET` `POST` `PUT` `DELETE` |
+| [MDN — HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status) | Focus on `200` `201` `400` `401` `404` `500` |
+| [Codecademy — What is REST?](https://www.codecademy.com/article/what-is-rest) | Resources in the URL, verbs as methods, JSON |
+
+**Takeaway for class:** `/books` is the collection, `/books/2` is one item. `POST` creates on the collection (needs a JSON body). `PUT` / `DELETE` need an id. Status codes tell the client what happened. In class the “database” is an array — restart resets it.
+
+---
+
+## 3. Building: Express and FastAPI (Required, ~12 min)
+
+Same REST contract. Different language. **Class uses Express** (you already have Node). FastAPI is so Python APIs don’t look alien.
+
+| Resource | Required? | What to get from it |
 | --- | --- | --- |
-| `GET` | Read | `GET /books` |
-| `POST` | Create | `POST /books` (JSON body) |
-| `PUT` | Update | `PUT /books/2` |
-| `DELETE` | Remove | `DELETE /books/2` |
+| [Express — Hello world](https://expressjs.com/en/starter/hello-world.html) | Yes (~3 min) | `app.get`, `app.listen` |
+| [Express — Routing](https://expressjs.com/en/guide/routing.html) | Yes — skim `req.params`, `req.body` | Path params vs JSON body |
+| [FastAPI — First steps](https://fastapi.tiangolo.com/tutorial/first-steps/) | Yes (~5–8 min) | `@app.get`, `/docs` |
+| [FastAPI crash course](https://www.youtube.com/watch?v=qJTFL7YfgZI) | Optional | You do **not** need to code along |
 
-Status codes you’ll see: `200` ok, `201` created, `400` you sent something wrong, `404` not found, `500` server bug.
-
-Class uses **Express** (Node) and an array as a fake database. Restart = data resets. That’s fine.
+**Takeaway:** `app.get("/books/:id", ...)` and `@app.get("/books/{id}")` are the same idea. You are not writing FastAPI in class.
 
 ---
 
-## 2. Install Insomnia (Required)
+## 4. External APIs (Required, ~8 min) — OpenAI is homework
 
-A browser address bar is basically `GET` only. It cannot send a `POST` with JSON. **Insomnia** is a small app for sending any HTTP request and reading the response. That’s how you talk to an API with no frontend.
+Calling GitHub, weather, Stripe, or OpenAI is the same HTTP you just read: URL, method, headers, JSON body, parse JSON back. **You** are the client.
 
-1. Download: [insomnia.rest/download](https://insomnia.rest/download)
-   - Mac: `.dmg` → drag to Applications. First open: right-click → **Open** if macOS blocks it
-   - Windows: `.exe` installer
-2. Open it. **You do not need an account.** Look for **Use the local Scratch Pad** (or similar “skip / local” wording) and use that.
-3. Confirm you can make an HTTP request: method dropdown + URL bar + **Send**
+| Resource | Required now? | What to get from it |
+| --- | --- | --- |
+| [MDN — Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) | Yes — “Supplying request options” (POST + headers) | How your server sends HTTP to *another* server |
+| [MDN — HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers) | Skim `Authorization` / `Content-Type` | Keys travel in headers, not in the URL |
+| [OpenAI — API overview](https://platform.openai.com/docs/overview) | Optional before class | Homework — we’ll recap a bit in wrap-up; **you** read the Chat Completions docs for the assignment |
 
-You don’t need a collection yet — class will send `http://localhost:3001/books`.
+**Takeaway:** never commit secrets. Homework is a tiny Express `POST /ask` that forwards a prompt to OpenAI and returns `{ reply }`. Do **not** implement that before class. After class: get a key, read [Chat Completions](https://platform.openai.com/docs/api-reference/chat), use a cheap model (`gpt-4o-mini`). If signup is blocked, tell a facilitator before the deadline.
 
 ---
 
-## 3. Install the starter once (Required)
+## 5. Insomnia (Required, ~10 min)
 
-So class isn’t spent waiting on npm:
+A browser address bar is basically `GET`. Insomnia sends any method, headers, and JSON.
+
+1. Install: [insomnia.rest/download](https://insomnia.rest/download)
+   - Mac: `.dmg` → Applications (right-click → **Open** if macOS blocks it)
+   - Windows: `.exe`
+2. **No account required** — use **local Scratch Pad** / skip login if you see it
+3. Follow their guide: [Send your first request](https://docs.insomnia.rest/insomnia/send-your-first-request) (or the current “first request” page in [Insomnia docs](https://docs.insomnia.rest/))
+
+Then practice on a fake public API (no key):
+
+- **GET** `https://jsonplaceholder.typicode.com/posts/1` → `200` + JSON
+- **POST** `https://jsonplaceholder.typicode.com/posts` with Body type **JSON**:
+
+```json
+{ "title": "swef", "body": "hello", "userId": 1 }
+```
+
+Expect `201`. If it fails, Body is probably not set to JSON — that will bite you in class too.
+
+**Takeaway:** method dropdown, URL, Body → JSON, Send, read the status + body on the right.
+
+---
+
+## 6. Class starter (Required, ~5 min)
 
 ```bash
 cd 04-api/activity/starter
 npm install
-```
-
-That should finish without errors. You do **not** need to run the server until class (`npm run dev`).
-
-Confirm Node still works:
-
-```bash
 node --version
 npm --version
 ```
+
+Do **not** need `npm run dev` until class.
+
+---
+
+## Extra (optional)
+
+| Resource | When |
+| --- | --- |
+| [MDN — URL](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) | Path vs query string |
+| [Express request object](https://expressjs.com/en/api.html#req) | `req.params` / `req.body` / `req.query` |
+| [FastAPI tutorial (full)](https://fastapi.tiangolo.com/tutorial/) | You think in Python |
+| [Open-Meteo](https://open-meteo.com/en/docs) | External API with no key (not homework) |
 
 ---
 
 ## Checklist
 
-- [ ] Can explain what an API is for in one or two sentences
-- [ ] Know `GET` vs `POST`
-- [ ] Insomnia opens (no account required)
+- [ ] Watched the API + REST 100-seconds videos
+- [ ] Read the MDN / Codecademy REST pieces (methods + status codes)
+- [ ] Skimmed Express hello world + routing, and FastAPI first steps
+- [ ] Know homework will be OpenAI (research after class — not required for the activity)
+- [ ] Insomnia installed; GET (and POST) to JSONPlaceholder worked
 - [ ] `npm install` done in `04-api/activity/starter`

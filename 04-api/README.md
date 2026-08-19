@@ -2,23 +2,24 @@
 
 **Date:** Mar 2nd, 2026
 
-> Do the [pre](pre/README.md) first — especially installing **Insomnia** and running `npm install` once. Class is a short hands-on: hit the GETs, then write **one** endpoint (`POST`).
+> The [pre](pre/README.md) **is** the lecture. Class is a short review, then you build. Insomnia + `npm install` must be done beforehand.
 
 ## Overview
 
-First real backend slice: a tiny Express REST API for a bookshelf. You send HTTP requests from Insomnia (no frontend). Class = **create** (`POST`). Homework = **update** (`PUT`) and **delete** (`DELETE`) on the same server.
+You already read how REST, Express, FastAPI, and Insomnia fit together. In class we only **review**, then you finish a small Books REST API (`POST`, `PUT`, `DELETE`) and test it in Insomnia. Homework is separate: research and wrap **OpenAI** (we’ll preview that in wrap-up; you read their docs to implement it).
 
 ## Agenda
 
-1. **Check-in (~5 min)** — Insomnia opens? `npm run dev` works?
-2. **Activity (~25 min)** — `GET` the starter, implement `POST /books`, send it from Insomnia
-3. **Walkthrough + questions (~rest of class)** — why POST vs GET, status codes, what’s left for homework
+1. **Review (~10–15 min)** — APIs, REST verbs, status codes, Express vs FastAPI, calling someone else’s API. Questions from [pre](pre/README.md)
+2. **Activity (~60 min)** — run the starter, hit the GETs, implement `POST` / `PUT` / `DELETE`, send each from Insomnia
+3. **Wrap-up (~5 min)** — homework is OpenAI: we’ll sketch the idea (your route vs their API, keys in `.env`). You research Chat Completions and implement it.
 
 ## What you should know coming in
 
-- What an API is and why backends expose them
-- Rough idea of `GET` / `POST` / `PUT` / `DELETE`
-- Insomnia installed; starter dependencies installed
+- What a REST API is (resources, methods, JSON, status codes)
+- How Insomnia sends GET/POST with a JSON body
+- That FastAPI is the Python counterpart to Express
+- That homework will call an external API (OpenAI) — details are in [hw](hw/README.md), not required to finish class
 
 ## Class Activity
 
@@ -26,4 +27,4 @@ First real backend slice: a tiny Express REST API for a bookshelf. You send HTTP
 
 ## Homework
 
-[hw/README.md](hw/README.md)
+[hw/README.md](hw/README.md) — wrap the OpenAI API behind one of your own routes
